@@ -15,8 +15,8 @@ Those who have Magento 2 site and facebook page with adertisments, this extensti
 1. Place webhook.php & get_leadgen_data.php in magento 2, Remember you must need to use your own credentials. 
 2. Place 'Earth' Folder under code.
 3. On command line type-  '```php -dmemory_limit=1024M ./bin/magento setup:upgrade```'
-
 Note: above command should be use under magento folder in command line
+
 4. Give Permission & Clear Cache
 
 # Important Links-->
