@@ -1,0 +1,89 @@
+s<!-- 
+
+<?php $_fblead = $this->getCollection(); ?>
+<?php if ($_fblead->getSize()): ?>
+<div class="fblead_list_view">
+    <?php foreach ($_fblead as $fbleadItem): ?>
+        <div id="item_<?php echo $fbleadItem->getId() ?>" class="fblead_list_item">
+            <h2>
+                <a href="<?php echo $this->getItemUrl($fbleadItem) ?>">
+                    <?php echo $this->escapeHtml($fbleadItem->getTitle()) ?>
+                </a>
+            </h2>
+
+            <div class="fblead_item_subtitle">
+                <?php echo $this->formatDate($fbleadItem->getPublishedAt()) ?> |
+                <?php echo $this->escapeHtml($fbleadItem->getAuthor()) ?>
+            </div>
+
+            <?php if ($imageUrl = $this->getImageUrl($fbleadItem, 100)): ?>
+               <p><img src="<?php echo $imageUrl ?>" alt="<?php echo $this->escapeHtml($fbleadItem->getTitle()); ?>" /></p>
+            <?php endif; ?>
+        </div>
+    <?php endforeach; ?>
+</div>
+<?php echo $this->getPager() ?>
+<?php else: ?>
+    <div class="message info empty"><span><?php echo __('You have no Fblead.'); ?></span></div>
+<?php endif ?>
+ -->
+
+
+
+<?php
+
+$name = 'Anup';
+$phone = 9096239397;
+$email = 'achaudhary7@gmail.com';
+$adid = 123456;
+$formid = 123698;
+
+//print_r($name);
+
+?>
+
+<html>
+<form name='redirect' action="<?php echo $this->getUrl('fblead/index/post');?>"  method='POST'>
+<input type='hidden' name='fb_leads_name' value='<?php echo $name; ?>'>
+<input type='hidden' name='fb_leads_email' value='<?php echo $email; ?>'>
+<input type='hidden' name='fb_leads_phone' value='<?php echo $phone; ?>'>
+<input type='hidden' name='fb_leads_ad_id' value='<?php echo $adid; ?>'>
+<input type='hidden' name='fb_leads_form_id' value='<?php echo $formid; ?>'>
+<input type='submit' value='Proceed'>
+</form>
+<script type='text/javascript'>
+ document.redirect.submit();
+</script>
+</html>
+
+
+
+<!-- <form method="POST" action="<?php echo $this->getUrl('fblead/index/post'); ?>" data-hasrequired="<?php echo __('* Required Fields') ?>" data-mage-init='{"validation":{}}'> 
+
+
+<fieldset class="fieldset">
+        
+        <div class="field note no-label"><?php echo __('Drop your query here we will get back to you.') ?></div>
+        <div class="field name required">
+            <label class="label" for="name"><span><?php echo __('Question title') ?></span></label>
+            <div class="control">
+                <input name="question_title" id="question_title" title="<?php echo __('Question Title') ?>" value="" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><span><?php echo __('question') ?></span></label>
+            <div class="control">
+                <input name="question" id="question" title="<?php echo __('question') ?>" value="" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" title="<?php echo __('Submit') ?>" class="action submit primary">
+                    <span><?php echo __('Submit') ?></span>
+                </button>
+            </div>
+        </div>
+</fieldset>
+    
+
+</form> -->

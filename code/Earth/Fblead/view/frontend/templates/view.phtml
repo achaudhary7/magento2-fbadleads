@@ -1,0 +1,30 @@
+<?php
+/**
+ * Fblead template for separate item
+ *
+ */
+
+/**
+ * @var $this Earth\Fblead\Block\View
+ * @see Earth\Fblead\Block\View
+ */
+?>
+<?php $_fbleadItem = $this->getFblead(); ?>
+    <div class="fblead_item_subtitle">
+        <?php echo $this->formatDate($_fbleadItem->getPublishedAt()) ?> |
+        <?php echo $this->escapeHtml($_fbleadItem->getAuthor()) ?>
+    </div>
+
+<div class="fblead_item_view">
+    <?php if ($imageUrl = $this->getImageUrl($_fbleadItem, 400)): ?>
+       <p><img src="<?php echo $imageUrl ?>" alt="<?php echo $this->escapeHtml($_fbleadItem->getTitle()) ?>" /></p>
+    <?php endif; ?>
+
+    <div class="fblead_item_content"><?php echo $_fbleadItem->getContent() ?></div>
+
+    <div class="pager">
+        <a href="<?php echo $this->getBackUrl() ?>">
+            <?php echo __('Return to list') ?>
+        </a>
+    </div>
+</div>

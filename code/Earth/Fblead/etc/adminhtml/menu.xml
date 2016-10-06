@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Earth_Fblead::fblead" title="Fblead" module="Earth_Fblead" sortOrder="30" resource="Earth_Fblead::fblead"/>
+    <add id="Earth_Fblead::fblead_manage" title="All Leads" module="Earth_Fblead" sortOrder="10" parent="Earth_Fblead::fblead" action="fblead/index/" resource="Earth_Fblead::manage"/>
+    
+    </menu>
+</config>
+
+
+<!-- 
+fblead_manage=fblead_all -->
+
+<!-- action="fblead/fbleads/ modulename/foldernameunder Adminhtml -->
