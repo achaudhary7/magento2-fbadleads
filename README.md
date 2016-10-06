@@ -18,3 +18,11 @@ Those who have Magento 2 site and facebook page with adertisments, this extensti
 Note: above command should be use under magento folder in command line
 4. Give Permission & Clear Cache
 
+# Important Links-->
+1. https://developers.facebook.com/tools/lead-ads-testing/  Use to create test leads
+2. https://developers.facebook.com/ads/blog/post/2015/12/18/webhooks-for-lead-ads-tutorial/  facebook's tutorial
+3. https://developers.facebook.com/tools/accesstoken/  access token
+4. https://developers.facebook.com/tools/explorer/ Graph explorer.
+
+
+# FAQ--> Let me know if you have any doubt
