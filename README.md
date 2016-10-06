@@ -1,12 +1,20 @@
-# magento2-facebook advr lead admin extension
+# Magento2 Facebook Advr Lead Admin Extension
 
 Those who have Magento 2 site and facebook page with adertisments, this extenstion is for them. This will automatically store your facebook leads into your Magento 2 admin db 
 
 # Requirments-->
-1. webhook.php
+1. webhook.php--> 
 2. get_leadgen_data.php
 3. Facebook Page
 4. Facebook form with ads
 5. Page ACCESS TOKEN
 
+ I have also provided these two file webhook.php & get_leadgen_data.php you can use same and update. 
+
 # Installation--> 
+1. Place webhook.php & get_leadgen_data.php in magento 2, Remember you must need to use your own credentials. 
+2. Place 'Earth' Folder under code.
+3. On command line type-  'php -dmemory_limit=1024M ./bin/magento setup:upgrade'
+Note: above command should be use under magento folder in command line
+4. Give Permission & Clear Cache
+
