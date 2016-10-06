@@ -1,7 +1,8 @@
 <?php
 $challenge = $_REQUEST['hub_challenge'];
 $security_token = $_REQUEST['hub_verify_token'];
-if($security_token == 'Mplex1234511'){
+if($security_token == 'Mplex1234511') //use your security token
+{
 	echo $challenge;
 }
 $input = json_decode(file_get_contents('php://input'),true);
@@ -15,6 +16,8 @@ foreach($entry_arr as $entry){
 	$leadgen_id = $entry['value']['leadgen_id'];
 	$ad_id = $entry['value']['ad_id'];
 	$form_id = $entry['value']['form_id'];
-	//exec("php /var/www/html/fbapp/get_leadgen_data.php ".$leadgen_id." ".$ad_id." ".$form_id." > /dev/null &");		
+	
+	// use can use another path
 	exec("php /var/www/html/magento2/get_leadgen_data.php ".$leadgen_id." ".$ad_id." ".$form_id." > /dev/null &");
+	
 }
